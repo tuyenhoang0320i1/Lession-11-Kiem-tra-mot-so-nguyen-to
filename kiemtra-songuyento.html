@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Kiểm tra một số có là số nguyên tố hay không</title>
 </head>
 <body>
-$END$
+<script>
+    let num = +prompt("Nhập vào số nguyên n: ");
+
+    function prime(number) {
+        let prime = true;
+        if (number < 2) {
+            prime = false;
+        } else {
+            for (let i = 2; i < number - 1; i++) {
+                if (number % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+        }
+        if (prime == true) {
+            alert(num + " là số nguyên tố");
+        } else {
+            alert(num + " không là số nguyên tố");
+        }
+    }
+    prime(num);
+</script>
 </body>
 </html>
